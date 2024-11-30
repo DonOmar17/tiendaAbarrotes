@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "560509873633",
+    "project_id": "tiendaabarrotes-d9297",
+    "storage_bucket": "tiendaabarrotes-d9297.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560509873633:android:931bd897749cd6adf536a0",
+        "android_client_info": {
+          "package_name": "com.abarrotes.company"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5NTxkdHnKVgnPesaCTx61jwR322nN4og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

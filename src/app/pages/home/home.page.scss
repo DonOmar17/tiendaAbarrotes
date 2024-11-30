@@ -1,0 +1,74 @@
+ion-header {
+  --background: #ff9800; // Cambia el color del toolbar a naranja
+  ion-toolbar {
+    ion-title {
+      font-size: 1.5rem; // Cambia el tamaño del título
+      font-weight: bold;
+    }
+  }
+}
+
+ion-content {
+  --background: #E65A00; // Fondo del contenido
+  padding: 16px;
+  height: 100%; // Asegura que el contenido ocupe todo el alto disponible
+  display: flex;
+  flex-direction: column; // Organiza el contenido en columnas
+
+  .card-container {
+    flex-grow: 1; // Permite que el contenedor crezca si es necesario
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Dos columnas para las tarjetas
+    gap: 16px; // Espacio entre las tarjetas
+    padding-bottom: 16px; // Agrega espacio al final para el scroll
+  }
+
+  ion-card {
+    text-align: center;
+    padding: 10px;
+    --ion-card-background: #1f1f1f; /* Fondo oscuro para el card */
+    border-radius: 10px; /* Bordes redondeados del card */
+    margin: 10px;
+  }
+
+  /* Ajustes para las imágenes */
+  img.card-logo {
+    width: 100%;
+    height: auto;
+    max-height: 120px; // Limita la altura máxima de las imágenes
+    object-fit: contain; // Asegura que las imágenes se ajusten correctamente sin deformarse
+  }
+
+  /* Estilos para el botón personalizado */
+  .custom-button {
+    --background: orange !important; /* Forzamos el color naranja en el fondo */
+    --color: white !important; /* Forzamos el color del texto a blanco */
+    width: 80px !important; /* Hacer el botón más pequeño */
+    height: 35px !important; /* Ajustar la altura del botón */
+    display: block !important;
+    margin: 10px auto !important; /* Centrar el botón horizontalmente */
+    border-radius: 5px !important; /* Bordes redondeados */
+    font-size: 14px !important; /* Tamaño de texto más pequeño */
+  }
+
+  /* Estilos para el logo flotante (carrito de compras) */
+  .floating-logo {
+    position: fixed; /* Fijo para que se mantenga en la misma posición al hacer scroll */
+    bottom: 16px; /* Distancia desde la parte inferior */
+    right: 16px; /* Distancia desde la derecha */
+    width: 56px; /* Tamaño del círculo */
+    height: 56px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace que sea un círculo */
+    background-color: white; /* Fondo blanco para el círculo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle efecto de elevación */
+    display: flex;
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+  }
+
+  .floating-logo ion-icon {
+    font-size: 40px; /* Tamaño del icono */
+    color: #ff9800; /* Color del icono */
+  }
+}

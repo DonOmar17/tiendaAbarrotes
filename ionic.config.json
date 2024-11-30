@@ -1,0 +1,7 @@
+{
+  "name": "tiendaAbarrotes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

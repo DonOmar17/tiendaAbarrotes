@@ -1,0 +1,72 @@
+<ion-content>
+  <div class="login-container">
+    <ion-card>
+      <ion-card-title>Bienvenido</ion-card-title>
+
+      <ion-card-content>
+        <!-- Campo de Correo Electrónico -->
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input 
+            type="email" 
+            [(ngModel)]="email" 
+            required
+            #emailInput="ngModel"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          </ion-input>
+        </ion-item>
+
+        <!-- Mensaje de error de correo inválido -->
+        <ion-text color="danger" *ngIf="emailInput.invalid && emailInput.touched">
+          Por favor, introduce un correo electrónico válido.
+        </ion-text>
+
+        <!-- Campo de Contraseña -->
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" required></ion-input>
+        </ion-item>
+
+        <ion-button 
+          expand="block" 
+          class="login-button" 
+          (click)="login()" 
+          [disabled]="emailInput.invalid">
+          Iniciar sesión
+        </ion-button>
+
+        <!-- Opción para crear una cuenta -->
+        <div class="signup-link">
+          <ion-button expand="full" (click)="toggleSignup()">¿No tienes cuenta? Crear cuenta</ion-button>
+        </div>
+
+        <div *ngIf="showSignup">
+          <!-- Campos de Registro -->
+          <ion-item>
+            <ion-label position="floating">Correo Electrónico</ion-label>
+            <ion-input type="email" [(ngModel)]="signupEmail" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" [(ngModel)]="signupPassword" required></ion-input>
+          </ion-item>
+
+          <!-- Checkbox para aceptar términos y condiciones -->
+          <ion-item lines="none">
+            <ion-checkbox [(ngModel)]="termsAccepted" slot="start"></ion-checkbox>
+            <ion-label>Acepto los <a (click)="openTerms()">términos y condiciones</a></ion-label>
+          </ion-item>
+
+          <ion-button 
+            expand="block" 
+            class="signup-button" 
+            (click)="signup()" 
+            [disabled]="!termsAccepted">
+            Crear cuenta
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

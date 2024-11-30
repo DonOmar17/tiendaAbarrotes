@@ -1,0 +1,13 @@
+ion-menu {
+  --background: #000; /* Cambia el fondo del menú a negro */
+  color: #fff; /* Cambia el color del texto a blanco */
+
+  ion-toolbar {
+    --background: #000; /* Fondo de la barra de herramientas en negro */
+    color: #fff; /* Color del texto en blanco */
+  }
+
+  ion-item {
+    --color: #fff; /* Color del texto en los elementos del menú */
+  }
+}

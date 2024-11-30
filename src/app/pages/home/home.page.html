@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Abarrotes Gabo</ion-title>
+    <ion-buttons slot="end">
+      <ion-searchbar
+        placeholder="Buscar producto..."
+        class="search-bar"
+        debounce="200"
+        (ionInput)="filterItems($event)"
+      ></ion-searchbar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card-container">
+    <ion-card *ngFor="let item of filteredItems">
+      <ion-card-header>
+        <ion-card-title>{{ item.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="item.logo" alt="{{ item.name }}" class="card-logo" />
+        <p>Precio: ${{ item.price }} MXN</p>
+        <ion-button (click)="addToCart(item)" color="success">Agregar al carrito</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="floating-logo" (click)="goToCart()">
+    <ion-icon name="cart" style="font-size: 40px; color: #ff9800;"></ion-icon>
+  </div>
+</ion-content>

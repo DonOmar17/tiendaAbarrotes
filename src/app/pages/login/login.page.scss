@@ -1,0 +1,66 @@
+ion-content {
+    --background: url('/assets/images/AG.jpg') no-repeat center center;
+    --background-size: 50%; /* Imagen ajustada al 50% del ancho del contenedor */
+    background-color: #FF914C; /* Fondo de color por si la imagen no cubre todo */
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% del viewport para centrar verticalmente */
+    padding: 20px;
+  }
+  
+  ion-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente (negro con 80% de opacidad) */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  ion-card-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Cambiar color del título a blanco */
+    margin-bottom: 20px; /* Añadido para espaciar mejor el título */
+  }
+  
+  ion-item {
+    --color: #fff; /* Cambiar color del texto dentro de los inputs a blanco */
+    margin-bottom: 15px;
+  }
+  
+  ion-label {
+    color: #fff; /* Asegura que el label "Correo Electrónico" y "Contraseña" estén en blanco */
+  }
+  
+  ion-input {
+    color: #fff; /* Asegura que el texto dentro de los inputs esté en blanco */
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    --background: #E65A00; /* Color de fondo del botón personalizado */
+    --color: #000; /* Color de texto personalizado */
+    border-radius: 20px; /* Bordes redondeados */
+  }
+  
+  /* Estilos para el enlace de "Crear cuenta" */
+  .signup-link {
+    text-align: center;
+    margin-top: 15px;
+  
+    a {
+      color: #3880ff; /* Color del enlace */
+      text-decoration: none;
+      font-size: 14px;
+    }
+  
+    a:hover {
+      text-decoration: underline; /* Subrayado al pasar el cursor */
+    }
+  }
+  

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ brandName | titlecase }} Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="products.length > 0; else noProducts">
+    <ion-card *ngFor="let product of products">
+      <ion-card-header>
+        <ion-card-title>{{ product.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ product.description }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ng-template #noProducts>
+    <p>No products available for {{ brandName | titlecase }}.</p>
+  </ng-template>
+</ion-content>
